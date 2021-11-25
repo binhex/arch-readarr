@@ -1,20 +1,19 @@
 **Application**
 
-[Sonarr](https://sonarr.tv/)
+[Readarr](https://github.com/Readarr/Readarr)
 
 **Description**
 
-Sonarr is a PVR for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new episodes of your favorite shows and will grab, sort and rename them. It can also be configured to automatically upgrade the quality of files already downloaded when a better quality format becomes available.
+Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will grab, sort and rename them. Note that only one type of a given book is supported. If you want both an audiobook and ebook of a given book you will need multiple instances.
 
 **Build notes**
 
-Latest stable Sonarr release from Arch Linux AUR.
+Latest stable Readarr release from Arch Linux AUR.
 
 **Usage**
 ```
 docker run -d \
-    -p 8989:8989 \
-    -p 9897:9897 \
+    -p 8787:8787 \
     --name=<container name> \
     -v <path for media files>:/media \
     -v <path for data files>:/data \
@@ -23,29 +22,28 @@ docker run -d \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
     -e PGID=<gid for user> \
-    binhex/arch-sonarr
+    binhex/arch-Readarr
 ```
 
 Please replace all user variables in the above command defined by <> with the correct values.
 
 **Access application**
 
-`http://<host ip>:8989`
+`http://<host ip>:8787`
 
 **Example**
 ```
 docker run -d \
-    -p 8989:8989 \
-    -p 9897:9897 \
-    --name=sonarr \
+    -p 8787:8787 \
+    --name=Readarr \
     -v /media/tv:/media \
     -v /apps/docker/sabnzbd/watched:/data \
-    -v /apps/docker/sonarr:/config \
+    -v /apps/docker/Readarr:/config \
     -v /etc/localtime:/etc/localtime:ro \
     -e UMASK=000 \
     -e PUID=0 \
     -e PGID=0 \
-    binhex/arch-sonarr
+    binhex/arch-Readarr
 ```
 
 **Notes**
