@@ -50,7 +50,7 @@ fi
 ####
 
 # define aur packages
-aur_packages="readarr-nightly"
+aur_packages="readarr-nightly-bin"
 
 # call aur install script (arch user repo)
 source aur.sh
