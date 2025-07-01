@@ -1,18 +1,24 @@
-**Application**
+# Application
 
 [Readarr](https://github.com/Readarr/Readarr)
 
-**Description**
+## Description
 
-Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent users. It can monitor multiple RSS feeds for new books from your favorite authors and will grab, sort and rename them. Note that only one type of a given book is supported. If you want both an audiobook and ebook of a given book you will need multiple instances.
+Readarr is an ebook and audiobook collection manager for Usenet and BitTorrent
+users. It can monitor multiple RSS feeds for new books from your favorite
+authors and will grab, sort and rename them. Note that only one type of a given
+book is supported. If you want both an audiobook and ebook of a given book you
+will need multiple instances.
 
-**Build notes**
+## Build notes
 
 Latest stable Readarr release from Arch Linux AUR.
 
-**Usage**
-```
+## Usage
+
+```bash
 docker run -d \
+
     -p 8787:8787 \
     --name=<container name> \
     -v <path for media files>:/media \
@@ -22,18 +28,23 @@ docker run -d \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
     -e PGID=<gid for user> \
+
     binhex/arch-Readarr
+
 ```
 
-Please replace all user variables in the above command defined by <> with the correct values.
+Please replace all user variables in the above command defined by <> with the
+correct values.
 
-**Access application**
+## Access application
 
 `http://<host ip>:8787`
 
-**Example**
-```
+## Example
+
+```bash
 docker run -d \
+
     -p 8787:8787 \
     --name=Readarr \
     -v /media/tv:/media \
@@ -43,16 +54,21 @@ docker run -d \
     -e UMASK=000 \
     -e PUID=0 \
     -e PGID=0 \
+
     binhex/arch-Readarr
-```
-
-**Notes**
-
-User ID (PUID) and Group ID (PGID) can be found by issuing the following command for the user you want to run the container as:-
 
 ```
+
+## Notes
+
+User ID (PUID) and Group ID (PGID) can be found by issuing the following command
+for the user you want to run the container as:-
+
+```bash
 id <username>
+
 ```
+
 ___
 If you appreciate my work, then please consider buying me a beer  :D
 
