@@ -18,7 +18,6 @@ Latest stable Readarr release from Arch Linux AUR.
 
 ```bash
 docker run -d \
-
     -p 8787:8787 \
     --name=<container name> \
     -v <path for media files>:/media \
@@ -28,9 +27,7 @@ docker run -d \
     -e UMASK=<umask for created files> \
     -e PUID=<uid for user> \
     -e PGID=<gid for user> \
-
     binhex/arch-Readarr
-
 ```
 
 Please replace all user variables in the above command defined by <> with the
@@ -44,7 +41,6 @@ correct values.
 
 ```bash
 docker run -d \
-
     -p 8787:8787 \
     --name=Readarr \
     -v /media/tv:/media \
@@ -54,9 +50,7 @@ docker run -d \
     -e UMASK=000 \
     -e PUID=0 \
     -e PGID=0 \
-
     binhex/arch-Readarr
-
 ```
 
 ## Notes
@@ -66,7 +60,6 @@ for the user you want to run the container as:-
 
 ```bash
 id <username>
-
 ```
 
 ___
